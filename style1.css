@@ -1,0 +1,160 @@
+h1, h2 {
+    text-align: center;
+    font-family: 'Candice', cursive;
+}
+
+h5 {
+    font-size: medium;
+}
+body {
+    background-color: white;
+}
+
+nav {
+    display: flex;
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    border: solid;
+    border-radius: 0%;
+    border-color: black;
+    font-family: 'Candice', cursive;
+}
+
+.boeken {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+img {
+    width: 280px;
+    height: 415px;
+    border-radius: 10px;
+}
+
+.image-item {
+    width: 200px;
+    margin: 50px;
+    text-align: center;
+}
+
+.image-item img {
+    width: 100%;
+    height: 250px;
+    border: 4px solid black; 
+    border-radius: 5px;
+}
+
+.image-description {
+    font-size: 14px;
+    font-family: 'Candice', cursive;
+}
+
+span {
+    color: black;
+}
+
+.blokje {
+    height: auto; 
+    width: 90%; 
+    margin: 0 auto; 
+    justify-content: center;
+    text-align: center;
+    border: solid;
+    border-radius:0%
+}
+
+nav a {
+    color: white;
+}
+
+a {
+    color: white;
+    font-family: 'Candice', cursive;
+}
+p {
+    font-family: 'Candice', cursive;
+    text-align: center;
+}
+
+footer {
+    background-color:black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.description {
+    width: 45%;
+    padding: 20px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: 5%;
+    background-color: rgb(199, 198, 198);
+    border: solid black;
+    border-radius: 10px;
+    text-align: center;
+    height: 370px;
+}
+
+.content {
+    display: flex;
+}
+
+.details {
+    display: flex;
+    margin: 50px;
+    text-align: center;
+    margin-left: auto;
+    border: solid black;
+    border-radius: 13px;
+}
+
+.cart {
+    border-color: white;
+    border-radius: 5px;
+    font-family: 'Candice', cursive;
+}
+
+.cart:hover {
+    background-color: rgb(200, 198, 198);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid;
+    padding: 10px;
+    text-align: center;
+}
+
+.formaction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    font-family: 'Candice', cursive;
+    font-size: 15px;
+}
+
+.ok {
+    margin-left: 32%;
+    margin-right: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Candice', cursive;
+}
+
+.logo {
+    display: flex;
+    justify-content: center
+}
+

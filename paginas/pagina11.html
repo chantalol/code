@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style1.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../About.html">About</a>
+            <a href="../Homepagina.php">Browse</a>
+            <a href="../Cart.html">Cart</a>
+            <a href="../inlog.php">Login</a>
+            <a href="../registreren.php">Register</a>
+        </nav>
+        <h1>Books2day</h1>
+    </header>
+<div class="content">
+    <div class="details">
+        <img src="../img/sjmjfif.jfif" alt="book1">
+    </div>
+    <div class="description">
+        <h1>Throne of Glass</h1>
+        <h2>€8.50</h2>
+        <p>After a year of slavery, an infamous teenage assassin named Celaena is given the chance to become the tyrannical king's personal assassin/King's Champion by representing Prince Dorian in a competition against the most gifted thieves and assassins in the land. She must survive every test and trial in order to proceed to the final, in which she has to fight her remaining opponents. As candidates are found dead in the castle, their bodies ruptured.</p>
+        <p>Quantity:
+        <select name="hoeveelheid" id="hoeveelheid">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        </p>
+        <br>
+        <button type="button" class="cart" onclick="addToCart('Throne of Glass', document.getElementById('hoeveelheid').value)">Add to cart</button>
+        <a href=""
+        </button>
+    </div>
+</div>
+<script>
+    function addToCart(bookName, quantity) {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.push({ name: bookName, quantity: quantity });
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        alert(bookName + ' has been added to the cart!');
+    }
+    </script>
+</body>
+</html>

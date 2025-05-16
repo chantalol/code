@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style1.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../About.html">About</a>
+            <a href="../Homepagina.html">Browse</a>
+            <a href="../Cart.html">Cart</a>
+            <a href="../inlog.php">Login</a>
+            <a href="../registreren.php">Register</a>
+        </nav>
+        <h1>Books2day</h1>
+    </header>
+<div class="content">
+    <div class="details">
+        <img src="../img/shopping (2).webp" alt="book1">
+    </div>
+    <div class="description">
+        <h1>The Serpent and the Wings of Night</h1>
+        <h2>€22.50</h2>
+        <p>The adopted human daughter of the Nightborn vampire king, Oraya carved her place in a world designed to kill her. Her only chance to become something more than prey is entering the Kejari: a legendary tournament held by the goddess of death herself.
+
+            But winning won’t be easy amongst the most vicious warriors from all three vampire houses. To survive, Oraya is forced to make an alliance with a mysterious rival.
+            
+        </p>
+        <p>Quantity:
+        <select name="hoeveelheid" id="hoeveelheid">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        </p>
+        <br>
+        <button type="button" class="cart" onclick="addToCart('The Serpent and the Wings of Night', document.getElementById('hoeveelheid').value)">Add to cart</button>
+    </div>
+</div>
+<script>
+    function addToCart(bookName, quantity) {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.push({ name: bookName, quantity: quantity });
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        alert(bookName + ' has been added to the cart!');
+    }
+    </script>
+</body>
+</html>

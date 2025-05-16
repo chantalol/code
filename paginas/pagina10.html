@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style1.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../About.html">About</a>
+            <a href="../Homepagina.html">Browse</a>
+            <a href="../Cart.html">Cart</a>
+            <a href="../inlog.php">Login</a>
+            <a href="../registreren.php">Register</a>
+        </nav>
+        <h1>Books2day</h1>
+    </header>
+<div class="content">
+    <div class="details">
+        <img src="../img/images.jfif" alt="book1">
+    </div>
+    <div class="description">
+        <h1>When the Moon hatched</h1>
+        <h2>€17.50</h2>
+        <p>As an assassin for the rebellion group Fíur du Ath, Raeve’s job is to complete orders and never get caught. When a rival bounty hunter turns her world upside down, blood spills, hearts break, and Raeve finds herself imprisoned by the Guild of Nobles—a group of powerful fae who turn her into a political statement.</p>
+        <p>Quantity:
+        <select name="hoeveelheid" id="hoeveelheid">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        </p>
+        <br>
+        <button type="button" class="cart" onclick="addToCart('When the Moon hatched', document.getElementById('hoeveelheid').value)">Add to cart</button>
+    </div>
+</div>
+<script>
+function addToCart(bookName, quantity) {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    cartItems.push({ name: bookName, quantity: quantity });
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    alert(bookName + ' has been added to the cart!');
+}
+</script>
+</body>
+</html>
